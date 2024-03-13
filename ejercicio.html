@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ejercicio con html y javascript</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Ejercicio 1: Taller de actualización.</h1>
+<br>
+<input type="text" id="texto" placeholder="Ingrese texto aquí">
+<button onclick="verificarTexto()">Verificar</button>
+
+<label id="mensaje"></label>
+
+<script>
+  function verificarTexto() {
+    let inputTexto = document.getElementById("texto").value.trim();
+    let mensajeLeer = document.getElementById("mensaje");
+
+    if (inputTexto === "") {
+      mensajeLeer.innerText = "Cargue algo por favor";
+      mensajeLeer.style.display = "block";
+    } else {
+      alert("Texto cargado: " + inputTexto);
+      console.log("Texto cargado: " + inputTexto);
+    }
+  }
+</script>
+
+</body>
+</html>
